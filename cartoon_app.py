@@ -67,12 +67,12 @@ def cartoonization (img, cartoon):
 ###############################################################################
     
 st.write("""
-          # Cartoonize Your Image!
+          # 方希 First Digital Art App!
 
           """
           )
 
-st.write("This is an app to turn your photos into cartoon")
+st.write("This is an app to turn your Photos into Art")
 
 file = st.sidebar.file_uploader("Please upload an image file", type=["jpg", "png"])
 
@@ -83,13 +83,13 @@ else:
     img = np.array(image)
     
     option = st.sidebar.selectbox(
-    'Which cartoon filters would you like to apply?',
+    'Which digital transform filters would you like to apply?',
     ('Pencil Sketch', 'Detail Enhancement', 'Pencil Edges', 'Bilateral Filter'))
     
     st.text("Your original image")
     st.image(image, use_column_width=True)
     
-    st.text("Your cartoonized image")
+    st.text("Your digital art image")
     cartoon = cartoonization(img, option)
     
     st.image(cartoon, use_column_width=True)
