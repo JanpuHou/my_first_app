@@ -1,2 +1,2 @@
 # my_first_app
-Simple filter for image processing
+Simple pencil sketch filter for image processing
