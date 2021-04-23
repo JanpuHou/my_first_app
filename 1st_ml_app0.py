@@ -68,10 +68,11 @@ x_train, x_test, y_train, y_test = train_test_split(x,y, test_size=0.2, random_s
 clf.fit(x_train,y_train)
 y_pred = clf.predict(x_test)
 
-acc = accuracy_score(y_test,y_pred)
+acc = accuracy_score(y_test,y_pred)*100
+acc = round(acc, 2)
 
 st.write(f"calssifier = {classifier_name}")
-st.write(f"accuracy = {acc}")
+st.write(f"accuracy = {acc} %")
 
 #plot
 
