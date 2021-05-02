@@ -25,11 +25,11 @@ option = st.sidebar.selectbox('Which digital transform would you like to apply?'
 def add_parameter_ui(transform_name):
     params = dict()
     if transform_name == "Oil Painting":
-      o1 = st.sidebar.number_input('neighbouring, input d = (integer)', 1,2,1)
+      o1 = st.sidebar.number_input('1 = sharpening, 2 = less sharpening, Input Sharpness(1 or 2)', 1,2,1)
       params["o1"] = o1
-      o2 = st.sidebar.number_input('sigma in color space, input sigmaColor(integer)',1,200, 60)
+      o2 = st.sidebar.number_input('Amount of smoothing, Input Sigma_Spatial (0-200)',1,200, 60)
       params["o2"] = o2
-      o3 = st.sidebar.slider("w2 (default=0.5)", 0.01, 1.0, 0.4)
+      o3 = st.sidebar.slider("How dissimilar colors within the neighborhood will be averaged, Input Sigma_Range (0-1)", 0.01, 1.0, 0.4)
       params["o3"] = o3	  
     elif transform_name == "Water Painting":
       w1 = st.sidebar.slider("w1 (default=20)", 1, 200, 20)
