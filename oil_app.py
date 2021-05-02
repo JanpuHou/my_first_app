@@ -18,7 +18,7 @@ st.write("This is an app to turn your Photos into Art")
 st.text("Upload your favorable photo to turn into a painting")
 
 
-file = st.sidebar.file_uploader("Please upload an image file", type=["jpg", "png"])  
+file = st.sidebar.file_uploader("Please upload an image file", type=["jpg", "png", "jpeg"])  
 option = st.sidebar.selectbox('Which digital transform would you like to apply?',("Oil Painting", "Water Painting", "Pencil Sketch","Color Pencil Sketch"))
 
 
