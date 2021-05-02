@@ -2,4 +2,4 @@ scikit-learn
 matplotlib 
 numpy 
 streamlit 
-opencv-python
+opencv-python-headless
